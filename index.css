@@ -28,3 +28,31 @@ p {
 ul {
     color: black !important;
 }
+
+kbd {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 0.9rem !important;
+    background-color: lightblue !important;
+    padding: 7px !important;
+}
+
+body {
+    background-image: url("back.png");
+
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    transition: 0.4s;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.4s;
+}
+
+.main-content {
+    font-size: 1rem !important;
+}
