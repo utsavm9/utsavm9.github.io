@@ -1,16 +1,16 @@
 .body-button {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
     word-wrap: break-word;
     box-sizing: border-box;
     display: inline-block;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     border-style: solid;
     border-width: 1px;
-    border-radius: 0.3rem;
+    border-radius: 3px;
     transition: color 0.2s, background-color 0.2s, border-color 0.2s;
     color: blueviolet !important;
     border-color: grey !important;
+    padding: 0.5rem 0.75rem;
 }
 
 .body-button:hover {
@@ -20,8 +20,15 @@
     border-color: blueviolet !important;
 }
 
+.project-name {
+    font-size: 4rem !important;
+}
+
+.project-tagline {
+    margin-top: 0 !important;
+}
+
 p {
-    text-align: justify !important;
     color: black !important;
 }
 
@@ -31,9 +38,11 @@ ul {
 
 kbd {
     font-family: Verdana, Geneva, Tahoma, sans-serif !important;
-    font-size: 0.9rem !important;
+    font-size: 0.8rem !important;
     background-color: lightblue !important;
-    padding: 7px !important;
+    padding: 6px !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 body {
@@ -46,6 +55,7 @@ body {
     padding: 25px;
     transition: 0.4s;
     margin-bottom: 20px;
+    border-radius: 5px;
 }
 
 .card:hover {
@@ -54,5 +64,14 @@ body {
 }
 
 .main-content {
-    font-size: 1rem !important;
+    font-size: 0.9rem !important;
+}
+
+details {
+    margin-top: 1rem;
+    padding: 0;
+}
+
+details summary::-webkit-details-marker {
+    display:none;
 }
