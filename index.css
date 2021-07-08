@@ -36,6 +36,22 @@ ul {
     color: black !important;
 }
 
+.seperator-box {
+    width: 100%;
+    display: flex;
+}
+
+.seperator {
+    flex: 1 1 auto;
+    margin: 0 !important;
+    text-align: center;
+    border-width: 0;
+    border-radius: 0;
+    font-size: 1.2rem !important;
+    cursor: pointer;
+    margin-bottom: 15px !important;
+}
+
 kbd {
     font-family: Verdana, Geneva, Tahoma, sans-serif !important;
     font-size: 0.8rem !important;
@@ -64,7 +80,14 @@ body {
 }
 
 .main-content {
+    padding-top: 0;
     font-size: 0.9rem !important;
+}
+
+.collapse-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
 
 details {
@@ -74,4 +97,8 @@ details {
 
 details summary::-webkit-details-marker {
     display:none;
+}
+
+.page {
+    transition: display 2s ease-out;
 }
