@@ -28,7 +28,7 @@ Array.from(document.getElementsByTagName("h2")).forEach(element => {
             content.style.maxHeight = null;
             this.textContent = "[–] " + text;
         } else {
-            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.maxHeight = "initial";
             this.textContent = "[+] " + text;
         }
     });

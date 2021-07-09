@@ -72,10 +72,11 @@ body {
     transition: 0.4s;
     margin-bottom: 20px;
     border-radius: 5px;
+    border: 2px solid white;
 }
 
 .card:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid lightblue;
     transition: 0.4s;
 }
 
@@ -96,7 +97,7 @@ details {
 }
 
 details summary::-webkit-details-marker {
-    display:none;
+    display: none;
 }
 
 .page {
