@@ -103,3 +103,9 @@ details summary::-webkit-details-marker {
 .page {
     transition: display 2s ease-out;
 }
+
+.work-title {
+    color: darkcyan;
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
