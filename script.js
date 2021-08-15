@@ -16,7 +16,7 @@ Array.from(document.getElementsByTagName("h2")).forEach(element => {
 
     // Show the section if the h2 contains the show class
     if (element.className.includes("show")) {
-        content.style.maxHeight = content.scrollHeight + "px";
+        content.style.maxHeight = "max-content";
         element.textContent = "[+] " + text;
     } else {
         element.textContent = "[–] " + text;
@@ -28,7 +28,7 @@ Array.from(document.getElementsByTagName("h2")).forEach(element => {
             content.style.maxHeight = null;
             this.textContent = "[–] " + text;
         } else {
-            content.style.maxHeight = "initial";
+            content.style.maxHeight = "max-content";
             this.textContent = "[+] " + text;
         }
     });
