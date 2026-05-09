@@ -36,12 +36,12 @@ ul {
     color: black !important;
 }
 
-.seperator-box {
+.separator-box {
     width: 100%;
     display: flex;
 }
 
-.seperator {
+.separator {
     flex: 1 1 auto;
     margin: 0 !important;
     text-align: center;
