@@ -1,0 +1,99 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{xcolor}
+\usepackage[scale=0.9]{geometry}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[indent=0pt]{parskip}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\setlength{\parskip}{2pt}
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{8pt}{8pt}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+\newenvironment{joblong}[5]{
+    \vspace{4pt}
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+        \textbf{#1}, #2 & & #3 \\[3pt]
+        #4 & & #5
+    \end{tabularx}
+    \begin{itemize}[nosep, after=\strut, leftmargin=1em, itemsep=3pt, label=--]
+}{
+    \end{itemize}
+}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{tabularx}{\linewidth}{@{}C@{}}
+    \Huge\textbf{Utsav Munendra} \\[7.5pt]
+    \href{mailto:utsavm9@gmail.com}{\raisebox{-0.05\height}\faEnvelope\ utsavm9@gmail.com} \ $|$ \
+    \href{tel:+13413482314}{\raisebox{-0.05\height}\faMobile\ +1 (341) 348-2314} \\
+\end{tabularx}
+
+\section{Work Experience}
+
+\begin{joblong}{Meta}{Software Engineer}{Jan 2022 - Present}{Virtual Reality Firmware}{Burlingame, CA}
+    \item Brought up boards, sensors and interfaces (SPI, I2C, UART, MSPI) for MCUs in Meta Quest 3, Quest 3S headsets and Meta Quest Touch Plus controllers
+    \item Led JMD as the sole partner SWE for Meta Quest Controller Rechargeable Batteries
+    \item Led in-market support for cameras involving bug-resolutions, architecture improvements, data-analysis and collaboration with Qualcomm on CamX
+    \item Designed sensor driver framework and HAL implementations for Qualcomm Hexagon DSP
+    \item Brought up USB Mass Storage end-to-end solution, from AOSP filesystem to flash sensor drivers
+    \item Assisted factory builds via on-site support and tooling implementation
+\end{joblong}
+
+\vspace{3pt}
+
+\begin{joblong}{Green Hills Software}{Software Engineering Intern}{Summer 2021, Summer 2022}{MULTI Debugger \& Advanced Products Group}{Santa Barbara, CA}
+    \item Extended the Rust compiler and ported Rust crates to natively support new Green Hills' Integrity RTOS targets
+    \item Increased performance of GHS Embedded Systems Debugger by making IPC more efficient
+\end{joblong}
+
+\begin{joblong}{Verkada}{Software Engineering Intern}{Winter 2021, Spring 2021}{Cameras Core OS}{San Mateo, CA}
+    \item Brought up OS service in Go for system encrypted volume setup and filesystem management
+    \item Assisted in new board bring-up by modifying Bitbake build system
+    \item Created test rack for new camera models
+\end{joblong}
+
+\section{Education}
+
+\begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{University of California, Los Angeles} & & Sept 2018 - Dec 2021 \\[3pt]
+\end{tabularx}
+B.S. in Computer Science, Henry Samueli School of Engineering and Applied Science \par
+GPA: 3.96/4.00. \textit{summa cum laude} \par
+Reader and Learning Assistant for CS33: Computer Organization
+
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{@{}X>{\raggedleft\arraybackslash}p{5cm}@{}}
+    \textbf{Open-Source Contributions to Zephyr RTOS} & 2025 \\[1pt]
+    Various CMSIS-RTOSv2 compatibility layer, flash and MSPI driver fixes \\[3pt]
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{}X>{\raggedleft\arraybackslash}p{4cm}@{}}
+    \textbf{WebAssembly Runtime (WAMR) for ARM Mbed} & 2020 \\[1pt]
+    Allows existing WebAssembly modules to run on ARM Mbed boards \\[3pt]
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{}X>{\raggedleft\arraybackslash}p{4cm}@{}}
+    \textbf{UCLA Cuneiform Digital Library Initiative (CDLI) Research Lab} & Summer 2019 \\[1pt]
+    User-customizable heatmap with filters for querying artifact data \\[3pt]
+\end{tabularx}
+
+\section{Skills}
+
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+    \textbf{Languages} & C/C++, Python, Rust, Go \\[1pt]
+    \textbf{RTOS}      & Zephyr, RTX5, Qualcomm QuRT \\[1pt]
+    \textbf{Tools}     & GDB, CMake, Makefile, Logic Analyzer, Oscilloscope
+\end{tabularx}
+
+\vfill
+
+\end{document}
