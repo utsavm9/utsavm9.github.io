@@ -38,7 +38,7 @@
 \titlespacing*{\section}{0pt}{\sectiongap}{\blockgap}
 
 % --- Bullet lists: small bullets, indented, tight spacing ---
-\setlist[itemize]{nosep, leftmargin=2em, itemsep=\itemgap, label={\small$\bullet$}, after=\strut}
+\setlist[itemize]{nosep, leftmargin=2em, label={\small$\bullet$}, after=\strut, before=\linespread{1.15}\selectfont}
 
 % --- Helper commands ---
 \newcommand{\name}[1]{{\fontfamily{bch}\fontsize{32pt}{36pt}\bfseries\selectfont #1}}
@@ -50,7 +50,7 @@
         \textbf{#1}, #2 & & #3 \\[\itemgap]
         #4              & & #5
     \end{tabularx}
-    \vspace{-2pt}
+    \vspace{-5pt}
     \begin{itemize}
 }{%
     \end{itemize}
@@ -86,45 +86,41 @@
 \section{Work Experience}
 
 \begin{jobitem}{Meta}{Software Engineer}{Jan 2022 - Present}{Virtual Reality Firmware}{Burlingame, CA}
-    \item Brought up boards, sensors and interfaces (SPI, I2C, UART, MSPI) for MCUs in Meta Quest 3, Quest 3S headsets and Meta Quest Touch Plus controllers
-    \item Led JMD as the sole partner SWE for Meta Quest Controller Rechargeable Batteries
-    \item Led in-market support for cameras involving bug-resolutions, architecture improvements, data-analysis and collaboration with Qualcomm on CamX
-    \item Designed sensor driver framework and HAL implementations for Qualcomm Hexagon DSP
-    \item Brought up USB Mass Storage end-to-end solution, from AOSP filesystem to flash sensor drivers
-    \item Assisted factory builds via on-site support and tooling implementation
+    \item Brought up boards, sensors and interfaces for MCUs in Meta Quest headsets and Meta Touch controllers.
+    \item Brought up USB Mass Storage end-to-end solution, from AOSP filesystem integration to flash sensor drivers. Committed bugfixes to LittleFS and Zephyr.
+    \item Designed sensor driver framework and HAL implementations for efficient sensor sampling from Qualcomm Hexagon DSP while targeting reusability with other MCUs.
+    \item Improved compute load and modularity of sensor data streaming APIs via Linux kernel driver optimizations.
+    \item Led in-market support for camera firmware involving architecture improvements, agentic bug-resolution, AI-assisted data-analysis along with collaboration with Qualcomm on CamX.
+    \item Led JMD as the sole partner SWE for Meta Quest Controller Rechargeable Batteries, and designed its interface and protocol with OEM controllers.
+    \item Assisted various factory builds via on-site debug and bringup support along with tooling implementation.
 \end{jobitem}
 
 \begin{jobitem}{Green Hills Software}{Software Engineering Intern}{Summer 2021, Summer 2022}{MULTI Debugger \& Advanced Products Group}{Santa Barbara, CA}
-    \item Extended the Rust compiler and ported Rust crates to natively support new Green Hills' Integrity RTOS targets
-    \item Increased performance of GHS Embedded Systems Debugger by making IPC more efficient
+    \item Extended the Rust compiler and standard library to natively support new Green Hills' Integrity RTOS targets. Proved support by hosting a web server on targets backed by prevalent async runtime Rust crates.
+    \item Increased performance of GHS Embedded Systems Debugger by making IPC more efficient.
 \end{jobitem}
 
 \begin{jobitem}{Verkada}{Software Engineering Intern}{Winter 2021, Spring 2021}{Cameras Core OS}{San Mateo, CA}
-    \item Brought up OS service in Go for system encrypted volume setup and filesystem management
-    \item Assisted in new board bring-up by modifying Bitbake build system
-    \item Created test rack for new camera models
+    \item Assisted in board bringup for CD62 Dome camera model and created the test rack for the new hardware.
+    \item Brought up OS service in Go for system encrypted volume setup and filesystem management.
 \end{jobitem}
 
 \section{Education}
 
 \begin{educationitem}{University of California, Los Angeles}{Sept 2018 - Dec 2021}
-    B.S. in Computer Science, Henry Samueli School of Engineering and Applied Science\par
-    GPA: 3.96/4.00, \textit{summa cum laude}\par
-    Reader and Learning Assistant for CS33: Computer Organization
+    B.S. in Computer Science, Henry Samueli School of Engineering and Applied Science \par
+    GPA: 3.96, \textit{summa cum laude} \par
+    Reader and undergraduate TA for CS33: Computer Organization (Systems Architecture) \par
 \end{educationitem}
 
 \section{Projects}
 
 \begin{projectitem}{Open-Source Contributions to Zephyr RTOS}{2025}
-    Various CMSIS-RTOSv2 compatibility layer, flash and MSPI driver fixes
+    Approved contributor for Zephyr Project, merged patches for various flash, MSPI driver and compatibility layer fixes.
 \end{projectitem}
 
 \begin{projectitem}{WebAssembly Runtime (WAMR) for ARM Mbed}{2020}
-    Allows existing WebAssembly modules to run on ARM Mbed boards
-\end{projectitem}
-
-\begin{projectitem}{UCLA Cuneiform Digital Library Initiative (CDLI) Research Lab}{Summer 2019}
-    User-customizable heatmap with filters for querying artifact data
+    Allows existing WebAssembly modules to run on ARM Mbed boards and the web alike for increased portability for IoT applications.
 \end{projectitem}
 
 \section{Skills}
@@ -134,7 +130,7 @@
 \begin{tabularx}{\linewidth}{@{}l X@{}}
     \textbf{Languages} & C/C++, Python, Rust, Go                          \\
     \textbf{RTOS}      & Zephyr, RTX5, Qualcomm QuRT                      \\
-    \textbf{Tools}     & GDB, CMake, Makefile, Logic Analyzer, Oscilloscope
+    \textbf{Tools}     & GDB, CMake, Makefile, BitBake, Logic Analyzer, Oscilloscope
 \end{tabularx}
 \endgroup
 
